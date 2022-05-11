@@ -1,6 +1,6 @@
 # Weather-Dashboard
 
-I want to create a weather dashboard that will use third-party APIs, OpenWeather One Call API, to be specific, to access their data and functionality so that I can retrieve weather data for cities of my choosing.  This app will run in the browser and feature dynamically updated HTML, and CSS.  It will also be powered by Moment.js and jQuery and styled by Google Fonts and Bootstrap.  This app will be a nice way to wrap up everything I have learned so far with the addition of retrieving and manipulating data from a third-party API to make a super useful app.
+I want to create a weather dashboard that will use third-party APIs, OpenWeather One Call API, to be specific, to access their data and functionality so that I can retrieve weather data for cities of my choosing.  This app will run in the browser and feature dynamically updated HTML, and CSS.  It will also be powered by jQuery and styled by Google Fonts and Bootstrap.  This app will be a nice way to wrap up everything I have learned so far with the addition of retrieving and manipulating data from a third-party API to make a super useful app.
 
 ## Acceptance Criteria
 
