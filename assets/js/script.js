@@ -17,10 +17,8 @@ function currentWeather() {
     console.log(city);
     var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=d23b9ff5efa45588d81ffe68aaf47963";
     fetch(queryURL)
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        })
+        .then(response => response.json())
+        .then(data => console.log(data));
 }
 
 fetchButton.addEventListener('click', currentWeather);
