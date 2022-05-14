@@ -4,11 +4,15 @@ var cityInput = document.getElementById('input-box');
 // how to search for weather by the city
 var cityFormSubmit = function (event) {
     event.preventDefault();
-    var city = cityInput.value;
-    if (city) {
-        currentWeather();
-        cityInput.value = '';
-    }
+    // var city = cityInput.value;
+    // if (city) {
+    //     currentWeather();
+    //     cityInput.value = '';
+    // }
+    // localStorage.setItem('input-box', city)
+    // $(document).on("click", function(event) {
+
+    // });
 };  
 
 // fetching API from server
