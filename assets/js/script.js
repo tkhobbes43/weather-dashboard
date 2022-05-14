@@ -21,7 +21,11 @@ function currentWeather() {
         .then(data =>{
             console.log(data)
             forecastWeather(data)
-        } );
+            var temp = 
+            var wind
+            var humidity
+            var UvIndex 
+        });
 }
 
 function forecastWeather(obj) {
