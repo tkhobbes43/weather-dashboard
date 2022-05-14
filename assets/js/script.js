@@ -21,10 +21,12 @@ function currentWeather() {
         .then(data =>{
             console.log(data)
             forecastWeather(data)
-            var temp = 
-            var wind
-            var humidity
-            var UvIndex 
+            var temp = document.querySelector(".temp");
+            temp.textContent = data.main.feels_like;
+            var wind = document.querySelector(".wind");
+            wind.textContent = data.wind.speed;
+            var humidity = document.querySelector(".humidity");
+            humidity.textContent = data.main.humidity; 
         });
 }
 
@@ -34,6 +36,8 @@ function forecastWeather(obj) {
         .then(response => response.json())
         .then(data => {
             console.log(data)
+            var uvIndex = document.querySelector(".uvindex");
+            uvIndex.textcontent = data.current.uvi;
         })
 }
 
