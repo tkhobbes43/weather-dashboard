@@ -18,6 +18,6 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
 
-[Link to deployed application] () 
+[Link to deployed application](https://tkhobbes43.github.io/weather-dashboard/) 
 
 ![screenshot of website]()

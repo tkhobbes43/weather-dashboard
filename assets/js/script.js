@@ -35,10 +35,9 @@ function forecastWeather(obj) {
     fetch(oneCallUri)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
             var uvIndex = document.querySelector(".uvindex");
             uvIndex.textContent = data.current.uvi;
-            for ()
         })
 }
 
