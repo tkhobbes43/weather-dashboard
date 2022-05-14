@@ -37,7 +37,8 @@ function forecastWeather(obj) {
         .then(data => {
             console.log(data)
             var uvIndex = document.querySelector(".uvindex");
-            uvIndex.textcontent = data.current.uvi;
+            uvIndex.textContent = data.current.uvi;
+            for ()
         })
 }
 
