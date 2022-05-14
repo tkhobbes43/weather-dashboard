@@ -21,8 +21,6 @@ function currentWeather() {
         .then(data =>{
             console.log(data)
             forecastWeather(data)
-            var iconCode = currentWeather.weather[0].icon;
-            var iconURL = `http://openweathermap.org/img/wn/${iconCode}.png`;
             var temp = document.querySelector(".temp");
             temp.textContent = data.main.feels_like;
             var wind = document.querySelector(".wind");
