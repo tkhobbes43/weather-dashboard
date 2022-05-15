@@ -20,4 +20,4 @@ THEN I am again presented with current and future conditions for that city
 
 [Link to deployed application](https://tkhobbes43.github.io/weather-dashboard/) 
 
-![screenshot of website]()
+![screenshot of website](assets/images/Capture.PNG)
