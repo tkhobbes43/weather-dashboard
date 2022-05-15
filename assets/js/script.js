@@ -38,7 +38,7 @@ function currentWeather(city) {
         $("#displayCurrentWeather").empty();
 
         var iconCode = cityWeatherResponse.weather[0].icon;
-        var iconURL = `https://operweathermap.org/img/wn/${iconCode}.png`;
+        var iconURL = `https://openweathermap.org/img/wn/${iconCode}.png`;
 
         var searchedCity = $(`
             <h2 id="currentCity">
