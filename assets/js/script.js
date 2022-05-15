@@ -40,7 +40,7 @@ function currentWeather(city) {
         }).then(function(uviResponse){
             console.log(uviResponse);
 
-            let uvIndex = uviResponse.value;
+            let uvIndex = uviResponse.current.uvi;
             let uvIndexPEl = $(`
                 <p>UV Index:
                     <span id="unIndexColor" class="px-2 py-2 rounded">${uvIndex}</span>
