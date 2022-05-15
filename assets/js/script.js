@@ -29,7 +29,18 @@ function currentWeather(city) {
         `);
 
         $("#displayCurrentWeather").append(searchedCity);
-    
+    // start of second api request for 5 day forecast and UVIndex
+        let lat = cityWeatherResponse.coord.lat;
+        let lon = cityWeatherResponse.coord.lon;
+        let uviQueryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+
+        $.ajax({
+            url: uviQueryURL,
+            method: "GET"
+        }).then(function(uviResponse){
+            console.log(uviResponse);
+        })
+
     });
 }
 
