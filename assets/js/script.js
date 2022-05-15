@@ -1,6 +1,8 @@
-var fetchButton = document.getElementById('fetch-button');
-var cityInput = document.getElementById('input-box');
+// var fetchButton = document.getElementById('fetch-button');
+// var cityInput = document.getElementById('input-box');
 
+var apiKey = "d23b9ff5efa45588d81ffe68aaf47963";
+var searchCityHistory = [];
 // how to search for weather by the city
 var cityFormSubmit = function (event) {
     event.preventDefault();
@@ -16,21 +18,40 @@ var cityFormSubmit = function (event) {
 };  
 
 // fetching API from server
-function currentWeather() {
-    var city = cityInput.value;
-    console.log(city);
-    var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=d23b9ff5efa45588d81ffe68aaf47963";
-    fetch(queryURL)
-        .then(response => response.json())
-        .then(data =>{
-            console.log(data)
-            forecastWeather(data)
-            var temp = document.querySelector(".temp");
-            temp.textContent = data.main.feels_like;
-            var wind = document.querySelector(".wind");
-            wind.textContent = data.wind.speed;
-            var humidity = document.querySelector(".humidity");
-            humidity.textContent = data.main.humidity; 
+function currentWeather( city) {
+    // var city = cityInput.value;
+    // console.log(city);
+    var queryURL= `https://api.openweathermap.org/data/2.5/weather?q="${city}&units=imperial&appid=${apiKey}`;
+    // fetch(queryURL)
+    //     .then(response => response.json())
+    //     .then(data =>{
+    //         console.log(data)
+    //         forecastWeather(data)
+    $.ajax({
+        url: 
+    })
+            $("#weather-box").css("display", "block");
+            $("#displayCurrentWeather").empty();
+
+            var iconCode = currentWeather.weather[0].icon;
+            var iconURL = `https://operweathermap.org/img/wn/${iconCode}.png`;
+
+            var searchedCity = $(`
+                <h2 id="currentCity">
+                ${cityWeatherResponse.name} ${today} <img src="${iconURL}" alt="${cityWeatherResponse.weather[0].description}" />
+            </h2>
+            <p>Temperature: ${cityWeatherResponse.main.temp} °F</p>
+            <p>Humidity: ${cityWeatherResponse.main.humidity}\%</p>
+            <p>Wind Speed: ${cityWeatherResponse.wind.speed} MPH</p>
+            
+            
+            `);
+            // var temp = document.querySelector(".temp");
+            // temp.textContent = data.main.feels_like;
+            // var wind = document.querySelector(".wind");
+            // wind.textContent = data.wind.speed;
+            // var humidity = document.querySelector(".humidity");
+            // humidity.textContent = data.main.humidity; 
         });
 }
 
