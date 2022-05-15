@@ -39,6 +39,15 @@ function currentWeather(city) {
             method: "GET"
         }).then(function(uviResponse){
             console.log(uviResponse);
+
+            let uvIndex = uviResponse.value;
+            let uvIndexPEl = $(`
+                <p>UV Index:
+                    <span id="unIndexColor" class="px-2 py-2 rounded">${uvIndex}</span>
+                <p>
+            `);
+
+            $("#displayCurrentWeather").append(uvIndexPEl);
         })
 
     });
