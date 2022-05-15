@@ -67,16 +67,6 @@ function currentWeather(city) {
     });
 }
 
-// function forecastWeather(obj) {
-//     var oneCallUri ="https://api.openweathermap.org/data/2.5/onecall?lat=" + obj.coord.lat + "&lon=" + obj.coord.lon + "&appid=d23b9ff5efa45588d81ffe68aaf47963&units=imperial"
-//     fetch(oneCallUri)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             var uvIndex = document.querySelector(".uvindex");
-//             uvIndex.textContent = data.current.uvi;
-//         })
-// }
 
 $("#search-button").on("click", function(event){
     event.preventDefault();
@@ -91,5 +81,4 @@ $("#search-button").on("click", function(event){
         $("#searchhistory").append(cityInput);
     };
 });
-// fetchButton.addEventListener('click', currentWeather);
-// cityInput.addEventListener('click', cityFormSubmit);
+
